@@ -1,0 +1,34 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "retire": "retire -p",
+    "lint": "eslint *.js test",
+    "docs-readme": "documentation readme -s API",
+    "docs-check": "documentation readme -s API -c",
+    "test": "npm run retire && npm run lint && npm run docs-check && tap --cov test/*.js",
+    "prepublish": "npm run docs-readme"
+  },
+  "devDependencies": {
+    "documentation": "github:documentationjs/documentation#v4.0.0-beta15",
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "retire": "*",
+    "tap": "^7.1.0"
+  },
+  "dependencies": {
+    "cdt2d": "^1.0.0",
+    "linear-solve": "^1.2.1",
+    "poly-to-pslg": "^1.0.1"
+  },
+  "name": "polyspine",
+  "description": "[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)",
+  "version": "1.0.0",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "Anand Thakker <vestibule@anandthakker.net> (http://anandthakker.net/)",
+  "license": "ISC"
+}
